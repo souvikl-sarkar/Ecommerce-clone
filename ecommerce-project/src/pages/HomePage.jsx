@@ -3,23 +3,24 @@ import './HomePage.css'
 export function HomePage(){
   return(
     <>
+        <title>Ecommerce Project</title>
         <div className="header">
-          <div class="left-section">
-            <a href="index.html" class="header-link">
-              <img class="logo"
-                src="images/logo-white.png" />
-              <img class="mobile-logo"
-                src="images/mobile-logo-white.png" />
-            </a>
-          </div>
+      <div class="left-section">
+        <a href="index.html" class="header-link">
+          <img class="logo"
+            src="images/logo-white.png" />
+          <img class="mobile-logo"
+            src="images/mobile-logo-white.png" />
+        </a>
+      </div>
 
-          <div class="middle-section">
-            <input class="search-bar" type="text" placeholder="Search" />
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search" />
 
-            <button class="search-button">
-              <img class="search-icon" src="images/icons/search-icon.png" />
-            </button>
-          </div>
+        <button class="search-button">
+          <img class="search-icon" src="images/icons/search-icon.png" />
+        </button>
+      </div>
 
           <div class="right-section">
             <a class="orders-link header-link" href="orders.html">
