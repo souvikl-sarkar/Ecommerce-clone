@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Header } from './components/Header';
 import { HomePage } from './pages/HomePage'
 import { Route,Routes } from 'react-router'
 import { useState,useEffect } from 'react'
@@ -20,12 +21,15 @@ function App() {
 
 
   return (
+    <>
+    <Header cart={cart} />
     <Routes>
       <Route index element={<HomePage cart={cart}/>} />
       <Route path="checkout"element={<CheckoutPage cart={cart} />}/>
-      <Route path="orders"element={<OrdersPage />}/>
+      <Route path="orders"element={<OrdersPage cart={cart}/>}/>
       <Route path="tracking"element={<TrackingPage />}/>
     </Routes>
+    </>
         
   )
 }
