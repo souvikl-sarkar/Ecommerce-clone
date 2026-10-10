@@ -10,7 +10,7 @@ export default defineConfig({
         target:"http://localhost:3000"
       },
       '/images':{
-        target:'http://localhost:300'
+        target:'http://localhost:3000'
       }
     }
   }
