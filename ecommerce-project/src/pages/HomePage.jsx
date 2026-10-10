@@ -5,9 +5,9 @@ import { products } from '../../starting-code/data/products'
 import './HomePage.css'
 
 
-export function HomePage(){
+export function HomePage({cart}){
   const[products,setProducts]=useState([])
-  const[cart,setCart]=useState([])
+  
 
 
   useEffect(()=>{
@@ -15,11 +15,6 @@ export function HomePage(){
     then((response)=>{
       setProducts(response.data)
     })
-
-    axios.get('/api/cart-items').
-      then((response)=>{
-        setCart(response.data)
-      })
   },[])
  
 
