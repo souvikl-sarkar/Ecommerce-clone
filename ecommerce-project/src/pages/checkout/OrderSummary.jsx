@@ -3,6 +3,7 @@ import dayjs from "dayjs"
 import { DeliveryOptions } from "./DeliveryOption"
 
 export function OrderSummary({cart,deliveryOptions}) {
+  return (
   <div className="order-summary">
 
     {deliveryOptions.length > 0 && cart.map((cartItem) => {
@@ -52,5 +53,5 @@ export function OrderSummary({cart,deliveryOptions}) {
     })}
 
   </div>
-
+  )
 }
