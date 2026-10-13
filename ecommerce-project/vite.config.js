@@ -19,4 +19,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
   },
+  build:{
+    outDir:'../ecommerce-backend/dist'
+  }
 })
