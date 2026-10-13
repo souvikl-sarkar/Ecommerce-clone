@@ -44,7 +44,7 @@ export function OrderSummary({cart,deliveryOptions,loadCart}) {
                   Quantity: <span className="quantity-label">{cartItem.quantity}</span>
                 </span>
                 <span className="update-quantity-link link-primary"
-                onClick={updateCartItem}>
+                >
                   Update
                 </span>
                 <span className="delete-quantity-link link-primary"
