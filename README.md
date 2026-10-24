@@ -11,47 +11,38 @@ A full-stack ecommerce learning project with a React storefront and a Node.js/Ex
 
 Follow the setup below for the main ecommerce app. The TypeScript starter is separate and is not required to run it.
 
-## Download the project
+## Download and run the project
 
-Install [Node.js](https://nodejs.org/) (which includes npm), then clone this repository and enter its folder:
+Install [Node.js](https://nodejs.org/) (which includes npm). In a terminal, go to your home folder and clone the repository. Let `git clone` finish before entering the project directory; do not press `Ctrl+C` while it is downloading.
 
 ```bash
-git clone https://github.com/Lalganguly/Ecommerce-clone.git
-cd Ecommerce-clone
+cd ~
+git clone https://github.com/Lalganguly/Ecommerce-clone.git Ecommerce-clone-setup
 ```
 
-Then follow **Run the app locally** below. It installs the frontend and backend dependencies and starts both parts of the app.
+The commands below assume the cloned folder is `~/Ecommerce-clone-setup`. Open **two terminal windows** and keep both running while using the app.
 
-## Requirements
-
-- Node.js and npm installed.
-- Two terminal windows: one for the backend and one for the frontend.
-
-## Run the app locally
-
-### 1. Start the backend
-
-In the first terminal, from the repository root:
+### Terminal 1: start the backend
 
 ```bash
-cd ecommerce-backend
+cd ~/Ecommerce-clone-setup/ecommerce-backend
 npm install
 npm run dev
 ```
 
-The API listens on `http://localhost:3000` by default.
+The API listens on `http://localhost:3000` by default. Leave this terminal running.
 
-### 2. Start the frontend
-
-In a second terminal, from the repository root:
+### Terminal 2: start the frontend
 
 ```bash
-cd ecommerce-project
+cd ~/Ecommerce-clone-setup/ecommerce-project
 npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite in your browser (usually [http://localhost:5173](http://localhost:5173)). Keep both terminals running while using the app. The Vite development server forwards `/api` and `/images` requests to the backend on port 3000.
+Open the local URL printed by Vite in your browser (usually [http://localhost:5173](http://localhost:5173)). The Vite development server forwards `/api` and `/images` requests to the backend on port 3000.
+
+If you cloned the repository into a folder with a different name or location, replace `~/Ecommerce-clone-setup` in the commands with the path you chose. Run each `cd` command from any directory; it uses the full path to the project, so you do not need to navigate from your home folder manually.
 
 ## Main features
 
@@ -84,6 +75,8 @@ The frontend includes a Vitest configuration and some component tests. The backe
 ## Troubleshooting
 
 - If the storefront cannot load products or cart data, check that the backend is running on port 3000.
+- If `cd ~/Ecommerce-clone-setup/ecommerce-project` says the directory does not exist, first make sure `git clone` completed successfully and that the folder is named `Ecommerce-clone-setup`.
+- If you interrupted cloning, remove or rename the incomplete `Ecommerce-clone-setup` folder before cloning again. Only remove it if it contains no work you need to keep.
 - If port 3000 is already in use, stop the other process or configure a different backend port and update the Vite proxy in `ecommerce-project/vite.config.js` to match.
 - For backend setup details, see [`ecommerce-backend/README.md`](ecommerce-backend/README.md) and [`ecommerce-backend/troubleshooting.md`](ecommerce-backend/troubleshooting.md).
 
