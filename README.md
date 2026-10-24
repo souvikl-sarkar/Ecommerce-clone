@@ -21,7 +21,7 @@ Open Terminal and enter these commands. Wait until `git clone` finishes before c
 
 ```bash
 cd ~
-git clone https://github.com/Lalganguly/Ecommerce-clone.git Ecommerce-clone-setup
+git clone https://github.com/souvikl-sarkar/Ecommerce-clone.git Ecommerce-clone-setup
 ```
 
 This creates the project folder `Ecommerce-clone-setup` inside your home folder. If Git says the destination folder already exists, the project may already be downloaded; use that existing folder instead of cloning again. If you want a fresh copy, choose a different destination name in the clone command.
