@@ -11,18 +11,24 @@ A full-stack ecommerce learning project with a React storefront and a Node.js/Ex
 
 Follow the setup below for the main ecommerce app. The TypeScript starter is separate and is not required to run it.
 
-## Download and run the project
+## Run this project on your computer
 
-Install [Node.js](https://nodejs.org/) (which includes npm). In a terminal, go to your home folder and clone the repository. Let `git clone` finish before entering the project directory; do not press `Ctrl+C` while it is downloading.
+These steps are for a first-time setup on a computer that does not already have this project. Install Node.js 22 or newer first; npm is included with Node.js. Keep the backend and frontend running in separate terminal windows.
+
+### 1. Download the project
+
+Open Terminal and enter these commands. Wait until `git clone` finishes before continuing:
 
 ```bash
 cd ~
 git clone https://github.com/Lalganguly/Ecommerce-clone.git Ecommerce-clone-setup
 ```
 
-The commands below assume the cloned folder is `~/Ecommerce-clone-setup`. Open **two terminal windows** and keep both running while using the app.
+This creates the project folder `Ecommerce-clone-setup` inside your home folder. If Git says the destination folder already exists, the project may already be downloaded; use that existing folder instead of cloning again. If you want a fresh copy, choose a different destination name in the clone command.
 
-### Terminal 1: start the backend
+### 2. Start the backend (Terminal 1)
+
+In the same terminal, run:
 
 ```bash
 cd ~/Ecommerce-clone-setup/ecommerce-backend
@@ -30,9 +36,11 @@ npm install
 npm run dev
 ```
 
-The API listens on `http://localhost:3000` by default. Leave this terminal running.
+Wait for the message that the server is running on port 3000. Leave this terminal open while you use the app.
 
-### Terminal 2: start the frontend
+### 3. Start the frontend (Terminal 2)
+
+Open a second terminal window and run:
 
 ```bash
 cd ~/Ecommerce-clone-setup/ecommerce-project
@@ -40,9 +48,18 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite in your browser (usually [http://localhost:5173](http://localhost:5173)). The Vite development server forwards `/api` and `/images` requests to the backend on port 3000.
+Wait for Vite to print a local address, then open it in a browser. The default is [http://localhost:5173](http://localhost:5173). Keep both terminal windows running. The frontend sends API and image requests to the backend at `http://localhost:3000`.
 
-If you cloned the repository into a folder with a different name or location, replace `~/Ecommerce-clone-setup` in the commands with the path you chose. Run each `cd` command from any directory; it uses the full path to the project, so you do not need to navigate from your home folder manually.
+If you chose a different clone folder name, replace `Ecommerce-clone-setup` in the `cd` commands with that folder name. Copy only the shell commands inside each code block into Terminal; do not type the Markdown code fence labels such as ```bash.
+
+### Get updates after cloning
+
+To update an existing copy later, run this from a terminal:
+
+```bash
+cd ~/Ecommerce-clone-setup
+git pull
+```
 
 ## Main features
 
@@ -74,11 +91,11 @@ The frontend includes a Vitest configuration and some component tests. The backe
 
 ## Troubleshooting
 
-- If the storefront cannot load products or cart data, check that the backend is running on port 3000.
-- If `cd ~/Ecommerce-clone-setup/ecommerce-project` says the directory does not exist, first make sure `git clone` completed successfully and that the folder is named `Ecommerce-clone-setup`.
-- If you interrupted cloning, remove or rename the incomplete `Ecommerce-clone-setup` folder before cloning again. Only remove it if it contains no work you need to keep.
+- If Git reports that the clone destination already exists, use the existing project folder or choose a different destination name; do not run the same clone command into a non-empty folder.
+- If a `cd` command says the directory does not exist, check that cloning completed and that the folder name matches the one used in the clone command.
+- If the storefront cannot load products or cart data, make sure the backend terminal is still running on port 3000.
 - If port 3000 is already in use, stop the other process or configure a different backend port and update the Vite proxy in `ecommerce-project/vite.config.js` to match.
-- For backend setup details, see [`ecommerce-backend/README.md`](ecommerce-backend/README.md) and [`ecommerce-backend/troubleshooting.md`](ecommerce-backend/troubleshooting.md).
+- For backend details, see [`ecommerce-backend/README.md`](ecommerce-backend/README.md) and [`ecommerce-backend/troubleshooting.md`](ecommerce-backend/troubleshooting.md).
 
 ## Disclaimer
 
